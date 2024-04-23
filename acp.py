@@ -13,7 +13,8 @@ from mpl_toolkits.mplot3d import Axes3D  # Importer les outils 3D
 # Définir les dimensions des données (n observations, p variables)
 n = 100  # Nombre d'observations
 p = 3    # Nombre de variables
-data = np.random.randn(n, p)*20.0
+mx_length = 2000.0 / 2.0
+data = np.random.randn(n, p)*mx_length*2.0
 
 # Calculer la moyenne de chaque variable
 means = np.mean(data, axis=0)
@@ -44,7 +45,7 @@ ax.scatter(data[:, 0], data[:, 2], data[:, 1], color='b', label='Donn\xe9es')
 ax.scatter(means[0], means[2], means[1], color='r', s=100, label='Moyennes', marker='o')
 
 min_length = 1
-max_length = 10
+max_length = mx_length
 col = ['green','orange', 'black']
 axis=['X','Y','Z']
 # Afficher les vecteurs propres à partir des moyennes
