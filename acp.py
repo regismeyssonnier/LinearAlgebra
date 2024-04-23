@@ -4,10 +4,16 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # Importer les outils 3D
 
 # Exemple de données (n observations, p variables)
-data = np.array([[1, 2, 3],
-                 [4, 5, 6],
-                 [7, 8, 9],
-                 [10, 8, 12]])
+# data = np.array([[1, 2, 3],
+#                  [4, 5, 6],
+#                  [7, 8, 9],
+#                  [10, 8, 12]])
+
+
+# Définir les dimensions des données (n observations, p variables)
+n = 100  # Nombre d'observations
+p = 3    # Nombre de variables
+data = np.random.randn(n, p)*20.0
 
 # Calculer la moyenne de chaque variable
 means = np.mean(data, axis=0)
