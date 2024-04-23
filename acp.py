@@ -14,7 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D  # Importer les outils 3D
 n = 50  # Nombre d'observations
 p = 3    # Nombre de variables
 mx_length = 10.0 / 2.0
-scale = 3.0
+scale = 10.0
 data = np.random.randn(n, p)*mx_length*2.0
 
 # Calculer la moyenne de chaque variable
