@@ -13,7 +13,7 @@ from mpl_toolkits.mplot3d import Axes3D  # Importer les outils 3D
 # Définir les dimensions des données (n observations, p variables)
 n = 100  # Nombre d'observations
 p = 3    # Nombre de variables
-mx_length = 2000.0 / 2.0
+mx_length = 20000.0 / 2.0
 data = np.random.randn(n, p)*mx_length*2.0
 
 # Calculer la moyenne de chaque variable
@@ -54,9 +54,9 @@ for i in range(len(eigenvalues)):
     length = np.sqrt(eigenvalues[num[i]])
     scaled_length = min_length + (max_length - min_length) * (length - min(eigenvalues)) / (max(eigenvalues) - min(eigenvalues))
     ax.quiver(means[0], means[2], means[1],
-              eigenvectors[0, i], eigenvectors[2, i], eigenvectors[1, i],
+              eigenvectors[0, num[i]], eigenvectors[2, num[i]], eigenvectors[1, num[i]],
               length=scaled_length, normalize=True,
-              color=col[i], label=axis[num[i]])
+              color=col[num[i]], label=axis[num[i]])
 
 
 # Ajouter des étiquettes et un titre au graphique
